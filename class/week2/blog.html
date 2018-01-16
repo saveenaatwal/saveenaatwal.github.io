@@ -68,6 +68,7 @@
       //get all the elements (divs) with the class .randomColor
       var randomColor = $(".randomColor");
 
+      //loop through all elements
       $.each(randomColor, function(index, item) {
         $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
       })
