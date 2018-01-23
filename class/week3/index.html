@@ -34,32 +34,38 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12 height randomColor">
-
+        <div class="col-md-12 height">
+          <p class="text-primary">...</p>
+          <p class="bg-success">...</p>
+          <p class="bg-danger">...</p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 height2">
+          <p class="bg-primary">...</p>
+          <p class="bg-success">...</p>
+          <p class="bg-info">...</p>
+          <p class="bg-warning">...</p>
+          <p class="bg-danger">...</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 height2 randomColor">
-
+        <div class="col-md-3 height3">
+<img class="makefitimage" src="img/food1.jpeg" alt="m&ms">
+        </div>
+        <div class="col-md-3 height3">
+<img class="makefitimage" src="img/food2.jpeg" alt="springrolls">
+        </div>
+        <div class="col-md-3 height3">
+<img class="makefitimage" src="img/food3.jpeg" alt="bread">
+        </div>
+        <div class="col-md-3 height3">
+<img class="makefitimage" src="img/food4.jpeg" alt="pastasalad">
         </div>
       </div>
       <div class="row">
         <div class="col-md-3 height3 randomColor">
-
-        </div>
-        <div class="col-md-3 height3 randomColor">
-
-        </div>
-        <div class="col-md-3 height3 randomColor">
-
-        </div>
-        <div class="col-md-3 height3 randomColor">
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 height3 randomColor">
-
+<img class="makefitimage" src="img/food5.jpeg" alt="pan">
         </div>
         <div class="col-md-3 height3 randomColor">
 
@@ -83,5 +89,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+        //get all the elements (divs) with the class .randomColor
+        var randomColor = $(".randomColor");
+
+        //loop through all elements
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
   </body>
 </html>
