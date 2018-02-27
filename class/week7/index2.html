@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 7</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style media="screen">
+      .height {
+        height: 75px;
+      }
+      .height2 {
+        height: 650px;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 height randomColor">
+
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-2 height2 randomColor">
+
+          </div>
+          <div class="col-md-8 height2 output">
+
+          </div>
+          <div class="col-md-2 height2 randomColor">
+
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height randomColor">
+
+        </div>
+      </div>
+      </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          //get a random color between 0 and 255
+          function getRandomColor() {
+            return Math.floor(Math.random() * 255);
+          }
+          //get all the elements (divs) with the class .randomColor
+          var randomColor = $(".randomColor");
+
+          //loop through all elements
+          $.each(randomColor, function(index, item) {
+            $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+          })
+        })
+        </script>
+
+
+<script>
+  disney  =
+  [
+      {
+        "name":"Mickey",
+        "species":"mouse",
+        "height":"short",
+        "color":"black",
+        "imgUrl":"disney1.png"
+      },
+      {
+        "name":"Minnie",
+        "species":"mouse",
+        "height":"short",
+        "color":"black",
+        "imgUrl":"disney2.png"
+      },
+      {
+        "name":"Pluto",
+        "species":"dog",
+        "height":"short",
+        "color":"yellow",
+        "imgUrl":"disney3.png"
+      },
+      {
+        "name":"Goofy",
+        "species":"dog",
+        "height":"tall",
+        "color":"black",
+        "imgUrl":"disney4.png"
+      },
+      {
+        "name":"Donald",
+        "species":"duck",
+        "height":"short",
+        "color":"white",
+        "imgUrl":"disney5.jpg",
+      }
+  ];
+
+$(document).ready(function(){
+  //$(".output").html("test output");
+  var html="<table class='table table-striped table-hover'>"+
+  "<tr>"+
+    "<th>name</th>"+
+    "<th>species</th>"+
+    "<th>height</th>"+
+    "<th>color</th>"+
+    "<th>imgUrl</th>"+
+  "</tr>";
+
+//here is the loop
+for(var i=0;i<disney.length;i++){
+  console.log("i "+i);
+html+= "<tr>"+
+  "<td><img src='"+disney[i].imgUrl+"''/></td>"+
+  "<td>"+disney[i].name+"</td>"+
+  "<td>"+disney[i].species+"</td>"+
+  "<td>"+disney[i].height+"</td>"+
+  "<td>"+disney[i].color+"</td>"+
+"</tr>";
+}
+
+html += "</table>";
+$(".output").html(html);
+});
+
+</script>
+  </body>
+</html>
