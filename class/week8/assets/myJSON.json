@@ -1,0 +1,38 @@
+[
+  {
+    "resort":"Walt Disney World",
+    "location":"Orlando",
+    "number of parks":"4",
+    "castle":"Cinderella Castle",
+    "visited":"yes"
+  },
+  {
+    "resort":"Disneyland",
+    "location":"Anaheim",
+    "number of parks":"2",
+    "castle":"Sleeping Beauty Castle",
+    "visited":"no"
+  },
+  {
+    "resort":"Disneyland Paris",
+    "location":"Paris",
+    "number of parks":"2",
+    "castle":"Sleeping Beauty Castle",
+    "visited":"no"
+  },
+  {
+    "resort":"Shanghai Disneyland",
+    "location":"Shanghai",
+    "number of parks":"1",
+    "castle":"Enchanted Storybook Castle",
+    "visited":"no"
+  },
+  {
+    "disney resorts":"Tokyo Disneyland",
+    "location":"Tokyo",
+    "number of parks":"2",
+    "castle":"Cinderella Castle",
+    "visited":"no"
+  }
+
+]
